@@ -338,6 +338,18 @@ h1.page-title{
   padding: 0 16px;
   background: linear-gradient(0deg, var(--paper) 55%, rgba(246,241,228,0));
   pointer-events:none;
+  transition: background 0.3s ease, opacity 0.3s ease, visibility 0s linear 0s;
+}
+.controls.on-dark{
+  background: linear-gradient(0deg, var(--spine) 55%, rgba(22,50,74,0));
+}
+.controls.on-dark .progress{
+  color: rgba(246,241,228,0.65);
+}
+.controls.hide-controls{
+  opacity: 0;
+  visibility: hidden;
+  transition: background 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s;
 }
 .controls > *{ pointer-events:auto; }
 .nav-btn{
