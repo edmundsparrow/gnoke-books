@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Comfort Food — A Gnoke Books Edition</title>
+<meta name="theme-color" content="#16324A">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.svg">
+<link rel="apple-touch-icon" href="icons/icon-192.svg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <div class="reader" id="reader">
+
+    <div class="spine"><span>Gnoke Books · Comfort Food · Issue 01</span></div>
+
+    <div class="install-banner" id="installBanner">
+      <span>Install this issue to keep it on your table, offline.</span>
+      <span style="display:flex;gap:8px;flex:0 0 auto;">
+        <button class="dismiss" id="dismissInstall">Not now</button>
+        <button id="doInstall">Install</button>
+      </span>
+    </div>
+
+    <div class="pages" id="pages">
+
+      <!-- 0: Cover -->
+      <section class="page cover" data-page="0">
+        <div>
+          <div class="kicker">Issue No. 1 · Comfort Food</div>
+          <div class="masthead">COMFORT<br>FOOD</div>
+        </div>
+        <div class="cover-image" style="flex:1;display:flex;align-items:center;justify-content:center;padding:0;">
+          <svg viewBox="0 0 380 480" style="width:100%;height:100%;" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Plantain and fish roasting over open coals, smoke rising into the night">
+<title>Bolle &amp; Fish — Cover Illustration</title>
+<foreignObject x="0" y="0" width="380" height="480">
+<div xmlns="http://www.w3.org/1999/xhtml" class="bolle-cover-frame">
+  <div class="bolle-cover-caption">
+    <h1>Bolle &amp; Fish</h1>
+    <p>Port Harcourt's roadside comfort</p>
+  </div>
+  <div class="bolle-cover-smoke s1"></div>
+  <div class="bolle-cover-smoke s2"></div>
+  <div class="bolle-cover-smoke s3"></div>
+  <div class="bolle-cover-smoke s4"></div>
+  <div class="bolle-cover-stand">
+    <div class="bolle-cover-leg l1"></div>
+    <div class="bolle-cover-leg l2"></div>
+    <div class="bolle-cover-leg l3"></div>
+    <div class="bolle-cover-leg l4"></div>
+    <div class="bolle-cover-basin"></div>
+    <div class="bolle-cover-coals">
+      <div class="bolle-cover-coal"></div><div class="bolle-cover-coal"></div><div class="bolle-cover-coal"></div>
+      <div class="bolle-cover-coal"></div><div class="bolle-cover-coal"></div><div class="bolle-cover-coal"></div>
+    </div>
+    <div class="bolle-cover-grate"></div>
+    <div class="bolle-cover-plantain p1"></div>
+    <div class="bolle-cover-plantain p2"></div>
+    <div class="bolle-cover-fish">
+      <div class="bolle-cover-fish-body"></div>
+      <div class="bolle-cover-fish-tail"></div>
+      <div class="bolle-cover-fish-eye"></div>
+      <div class="bolle-cover-fish-char"></div>
+    </div>
+    <div class="bolle-cover-sauce-bowl">
+      <div class="bolle-cover-bowl"></div>
+      <div class="bolle-cover-sauce"></div>
+      <div class="bolle-cover-sheen"></div>
+    </div>
+  </div>
+</div>
+</foreignObject>
+</svg>
+        </div>
+        <ul class="coverlines">
+          <li><b>Bolle &amp; Fish</b><em>Street Kitchen</em></li>
+          <li><b>A Working Recipe</b><em>One Shipped Feature</em></li>
+          <li><b>A Postcard Home</b><em>Kept Letter</em></li>
+          <li><b>What's Actually Simmering</b><em>Feature</em></li>
+        </ul>
+      </section>
+
+      <!-- 1: Contents -->
+      <section class="page" data-page="1">
+        <div class="folio"><span>Comfort Food</span><span>Contents</span></div>
+        <h1 class="page-title">Inside This Issue</h1>
+        <div class="toc-columns">
+          <ul class="toc-list">
+            <li data-goto="2"><span class="toc-name">Editor's Note</span><span class="toc-dots"></span><span class="toc-num">03</span></li>
+            <li data-goto="3"><span class="toc-name">The Table</span><span class="toc-dots"></span><span class="toc-num">04</span></li>
+            <li data-goto="4"><span class="toc-name">A Postcard Home</span><span class="toc-dots"></span><span class="toc-num">05</span></li>
+            <li data-goto="5"><span class="toc-name">A Word From Our Sponsor</span><span class="toc-dots"></span><span class="toc-num">06</span></li>
+            <li data-goto="6"><span class="toc-name">Bolle &amp; Fish</span><span class="toc-dots"></span><span class="toc-num">07</span></li>
+            <li data-goto="7"><span class="toc-name">A Working Recipe</span><span class="toc-dots"></span><span class="toc-num">08</span></li>
+            <li data-goto="8"><span class="toc-name">Next Issue</span><span class="toc-dots"></span><span class="toc-num">09</span></li>
+          </ul>
+        </div>
+        <div class="toc-masthead">Edited by @edmundsparrow</div>
+      </section>
+
+      <!-- 2: Editor's note -->
+      <section class="page" data-page="2">
+        <div class="folio"><span>Editor's Note</span><span>03</span></div>
+        <div class="eyebrow">Welcome</div>
+        <h1 class="headline">Why We're Doing This The Old Way</h1>
+        <p class="dropcap">There is a particular pleasure in a publication that ends. A feed never closes; a magazine does. This edition was written, laid out, and finished — then set down, the way a printed issue used to land in your hands on a Tuesday and stay finished until the next one arrived.</p>
+        <p>Everything you're reading lives in plain HTML. No build step, no server rendering, no subscription. If you like it, install it from the button up top and it's yours — readable on a train, in a waiting room, anywhere the signal drops.</p>
+        <p class="pullquote">"One edition, one publication. Not a stream — a snapshot."</p>
+        <p>Turn the page when you're ready.</p>
+      </section>
+
+      <!-- 3: Feature -->
+      <section class="page" data-page="3">
+        <div class="folio"><span>The Table</span><span>04</span></div>
+        <div class="eyebrow">Feature</div>
+        <h1 class="headline">What's Actually Simmering</h1>
+        <p class="dek">A recipe, if you're willing to read it that way.</p>
+        <p class="dropcap">There's a kind of cooking that has nothing to do with a stove. It starts with an idea half-formed, a pot you don't fully understand yet, and something helping you taste as you go — catching the salt before you burn your tongue on it. That's what building software with AI has felt like for three years now: not being handed a finished meal, but handed a very fast, very patient sous-chef who's tasted a thousand kitchens and still lets you hold the spoon.</p>
+        <p>The craft was never in the ingredients being expensive. It was in the mise en place — everything prepped, labeled, and in its place before the heat goes on. Write down what you're building before you build it. Write down what burned you last time so it doesn't happen twice. A kitchen without notes just repeats its own mistakes, confidently, forever.</p>
+        <p class="pullquote">"A dish that's confidently wrong and served anyway does more damage than one you admit isn't ready yet."</p>
+        <p>Three years of this, and the meal on the table keeps changing — the tools, the models, the recipes themselves. What doesn't change is the discipline underneath: taste everything twice, write down what broke, never plate something you haven't checked yourself. That part was never automated, and it's the part actually worth being known for.</p>
+      </section>
+
+      <!-- 4: Postcard -->
+      <section class="page" data-page="4">
+        <div class="folio"><span>Kept Letter</span><span>05</span></div>
+        <div class="eyebrow">A Postcard Home</div>
+        <h1 class="headline" style="font-size:22px;">From Edmundsparrow's Kitchen</h1>
+        <div class="postcard">
+          <div class="art"><img src="assets/window.png" alt="A kitchen window, steam on the glass"></div>
+          <div class="write-side">
+            <div class="lines">
+              <p class="note">Comfort Food went out into the DEV Frontend Challenge, and if @sylwia-lask, @francistrdev, @dannwaneri or @technogamerz have a plate to spare — come see what a community member put on the table this time.</p>
+              <span class="signoff">— Edmund</span>
+            </div>
+            <div class="stamp-box"><img src="assets/stamp.png" alt="stamp"></div>
+            <div class="postmark">COMFORT<br>FOOD<br>ISSUE 01</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5: Sponsor advert — the pitch is the browser itself -->
+      <section class="page" data-page="5">
+        <div class="folio"><span>Advertisement</span><span>06</span></div>
+        <div class="ad-banner"><img src="assets/dev-challenge-banner.webp" alt="DEV Challenges — Frontend Challenge: Comfort Food Edition, July 29 to August 16"></div>
+        <div class="browser-frame">
+          <div class="browser-topbar">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-address">dev.to/challenges/frontend</div>
+          </div>
+          <div class="dev-feed-window">
+            <button type="button" class="feed-pause-btn" id="feedPauseBtn" aria-label="Pause scrolling feed" aria-pressed="false">⏸</button>
+            <ul class="dev-feed-track" id="devFeedTrack" aria-label="Past DEV Frontend Challenge editions, auto-scrolling">
+              <li class="feed-item"><a class="handle" href="https://dev.to/challenges/frontend-2025-10-15" target="_blank" rel="noopener">Halloween Edition</a><p>CSS Art &amp; Perfect Landing, judged, real deadline — Oct–Nov 2025.</p></li>
+              <li class="feed-item"><a class="handle" href="https://dev.to/challenges/frontend-2024-07-24" target="_blank" rel="noopener">Recreation Edition</a><p>CSS Art &amp; Glam Up My Markup — this format's been running since 2024.</p></li>
+              <li class="feed-item"><a class="handle" href="https://dev.to/devteam/join-us-for-the-next-frontend-challenge-february-edition-3070" target="_blank" rel="noopener">February Edition</a><p>CSS Art &amp; Glam Up My Markup, Love Language theme — same rules, different season.</p></li>
+              <li class="feed-item"><a class="handle" href="https://dev.to/challenges/frontend" target="_blank" rel="noopener">Every Past Edition</a><p>Archived, one after another — the work was always real.</p></li>
+              <li class="feed-item" aria-hidden="true"><a class="handle" href="https://dev.to/challenges/frontend-2025-10-15" target="_blank" rel="noopener">Halloween Edition</a><p>CSS Art &amp; Perfect Landing, judged, real deadline — Oct–Nov 2025.</p></li>
+              <li class="feed-item" aria-hidden="true"><a class="handle" href="https://dev.to/challenges/frontend-2024-07-24" target="_blank" rel="noopener">Recreation Edition</a><p>CSS Art &amp; Glam Up My Markup — this format's been running since 2024.</p></li>
+              <li class="feed-item" aria-hidden="true"><a class="handle" href="https://dev.to/devteam/join-us-for-the-next-frontend-challenge-february-edition-3070" target="_blank" rel="noopener">February Edition</a><p>CSS Art &amp; Glam Up My Markup, Love Language theme — same rules, different season.</p></li>
+              <li class="feed-item" aria-hidden="true"><a class="handle" href="https://dev.to/challenges/frontend" target="_blank" rel="noopener">Every Past Edition</a><p>Archived, one after another — the work was always real.</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6: Bolle & Fish -->
+      <section class="page" data-page="6">
+        <div class="folio"><span>Street Kitchen</span><span>07</span></div>
+        <div class="eyebrow">A Port Harcourt Original</div>
+        <h1 class="headline" style="font-size:22px;">Bolle &amp; Fish</h1>
+        <p class="dek" style="margin-bottom:14px;">Roasted plantain, grilled fish, and a pepper sauce that argues back. If you don't know bolle, you don't know Port Harcourt.</p>
+
+        <p>Every evening in Port Harcourt, smoke rises off roadside grills as ripe plantain chars slowly over coal beside the day's fish. There's no menu and no seating — just a bench, a nylon bag, and a pepper sauce recipe nobody writes down. Locals call it bolle, and outside Rivers State it barely gets talked about, which is the city's loss.</p>
+
+        <div class="ng-map-frame">
+          <svg viewBox="0 0 340 380" class="ng-map" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simplified map of Nigeria with Rivers State highlighted">
+            <title>Nigeria — Rivers State</title>
+            <path class="land-shadow" d="M64,44 L154,22 L244,49 L274,94 L254,154 L262,214 L234,264 L209,304 L199,339 L169,324 L134,304 L99,274 L74,224 L59,154 L64,94 Z"/>
+            <path class="land" d="M60,40 L150,18 L240,45 L270,90 L250,150 L258,210 L230,260 L205,300 L195,335 L165,320 L130,300 L95,270 L70,220 L55,150 L60,90 Z"/>
+            <text x="170" y="14" text-anchor="middle" class="title-label">NIGERIA</text>
+            <circle class="ref-dot" cx="150" cy="175" r="3"/>
+            <text x="157" y="178" class="ref-label">Abuja</text>
+            <circle class="ref-dot" cx="95" cy="270" r="3"/>
+            <text x="88" y="273" text-anchor="end" class="ref-label">Lagos</text>
+            <circle class="rivers-ring" cx="190" cy="316" r="11"/>
+            <circle class="rivers-dot" cx="190" cy="316" r="4"/>
+            <path class="leader" d="M199,318 L248,330"/>
+            <text x="252" y="326" class="rivers-label">RIVERS STATE</text>
+            <text x="252" y="340" class="rivers-sublabel">· Port Harcourt</text>
+            <text x="170" y="364" text-anchor="middle" class="sea-label">Gulf of Guinea</text>
+          </svg>
+          <div class="ng-map-caption">Simplified outline, not to scale — the pepper sauce is exact.</div>
+        </div>
+
+        <div class="bolle-ingredients">
+          <h3>What's In The Wrap</h3>
+          <ul class="region-list">
+            <li>Ripe plantain, roasted whole over open coal</li>
+            <li>Fresh fish — usually croaker or mackerel, grilled or fried</li>
+            <li>A palm-oil pepper sauce, blended fresh to order</li>
+            <li>Yam, standing in for plantain some nights</li>
+            <li>Wrapped in nylon or old newspaper, eaten standing up</li>
+          </ul>
+        </div>
+
+        <div class="ph-callout">
+          <h3>The PH Test</h3>
+          <p>Every bolle spot has regulars who'll argue theirs is the real one — the fish should be fresh off the smoker, the sauce should bite back, and the plantain should never be rushed. Ask a Port Harcourt native to name the best joint and be ready for a whole debate.</p>
+        </div>
+      </section>
+
+      <!-- 7: Recipe card -->
+      <section class="page" data-page="7">
+        <div class="folio"><span>Recipe</span><span>08</span></div>
+        <div class="eyebrow">Cut &amp; Keep</div>
+        <h1 class="headline" style="font-size:24px;">A Working Recipe</h1>
+        <div class="recipe-card">
+          <h2>One Shipped Feature</h2>
+          <div class="serves">Serves: whoever actually uses it · Time: however long it takes</div>
+          <div class="cols">
+            <div>
+              <h3>Ingredients</h3>
+              <ul>
+                <li>1 real idea</li>
+                <li>1 AI collaborator, patient, occasionally wrong</li>
+                <li>Enough testing to actually trust it</li>
+                <li>A habit of writing down what broke</li>
+                <li>3 years, minimum</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Method</h3>
+              <ol>
+                <li>Sear the idea until it smells like something real.</li>
+                <li>Fold in the AI — let it reduce your busywork, not your judgment.</li>
+                <li>Taste constantly. A wrong answer served with confidence ruins the whole pot.</li>
+                <li>Write down every burn so the next session doesn't repeat it.</li>
+                <li>Serve only what you'd stand behind yourself.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8: Back cover -->
+      <section class="page back-cover" data-page="8">
+        <button id="forceUpdateBtn" class="force-update-btn" type="button" aria-label="Check for a fresh update">⟳ Update</button>
+        <div class="sign-off">Set the table for the next one.</div>
+        <div class="masthead-credit">
+          <div class="mc-role">Editor &amp; Publisher</div>
+          <div class="mc-name">edmundsparrow</div>
+          <div class="mc-links">dev.to/edmundsparrow &nbsp;·&nbsp; github.com/edmundsparrow</div>
+        </div>
+        <div class="colophon">
+          COMFORT FOOD — ISSUE NO. 1<br>
+          A Gnoke Books Edition<br>
+          Set in Playfair Display, DM Sans &amp; Caveat<br>
+          No frameworks, no build step — just HTML, CSS, and a little JS
+        </div>
+      </section>
+
+    </div>
+
+    <div class="controls">
+      <button class="nav-btn" id="prevBtn" aria-label="Previous page">‹</button>
+      <span class="progress" id="progress">1 / 9</span>
+      <button class="nav-btn" id="nextBtn" aria-label="Next page">›</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
