@@ -1,4 +1,4 @@
-const CACHE = 'gnoke-books-comfort-food-v21';
+const CACHE = 'gnoke-books-comfort-food-v24';
 
 const ASSETS = [
   './',
