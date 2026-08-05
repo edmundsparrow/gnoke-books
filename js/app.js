@@ -6,8 +6,17 @@
   const prevBtn   = document.getElementById('prevBtn');
   const nextBtn   = document.getElementById('nextBtn');
   const progress  = document.getElementById('progress');
+  const controlsEl = document.getElementById('controls');
   const total     = pages.length;
   let current     = 0;
+
+  function updateControlsTheme() {
+    const page = pages[current];
+    const isCover = !!page && page.classList.contains('cover');
+    const isBackCover = !!page && page.classList.contains('back-cover');
+    controlsEl.classList.toggle('on-dark', isCover || isBackCover);
+    controlsEl.classList.toggle('hide-controls', isCover);
+  }
 
   function layout() {
     pages.forEach((p, i) => {
@@ -16,6 +25,7 @@
       if (i < current) p.classList.add('hidden-back');
       else p.classList.add('hidden-forward');
     });
+    updateControlsTheme();
   }
 
   function render(prevIndex, direction) {
@@ -36,6 +46,7 @@
     prevBtn.disabled = current === 0;
     nextBtn.disabled = current === total - 1;
     progress.textContent = `${current + 1} / ${total}`;
+    updateControlsTheme();
   }
 
   function goTo(index) {
