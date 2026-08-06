@@ -71,6 +71,12 @@
   // Table of contents jumps
   pagesEl.querySelectorAll('[data-goto]').forEach(el => {
     el.addEventListener('click', () => goTo(parseInt(el.dataset.goto, 10)));
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        goTo(parseInt(el.dataset.goto, 10));
+      }
+    });
   });
 
   // Keyboard navigation
@@ -108,78 +114,6 @@
       feedPauseBtn.setAttribute('aria-label', paused ? 'Resume scrolling feed' : 'Pause scrolling feed');
     });
   }
-
-  // ---------- Install prompt ----------
-  const installBanner = document.getElementById('installBanner');
-  const installBtn     = document.getElementById('doInstall');
-  const dismissBtn      = document.getElementById('dismissInstall');
-  let deferredPrompt = null;
-  let bannerAutoHide = null;
-
-  const isRunningInstalled = window.matchMedia('(display-mode: standalone)').matches
-    || window.navigator.standalone === true; // iOS Safari's own standalone flag
-
-  function showInstallBanner() {
-    installBanner.classList.add('show');
-    clearTimeout(bannerAutoHide);
-    bannerAutoHide = setTimeout(() => {
-      installBanner.classList.remove('show'); // slides back up via the existing CSS transition
-    }, 15000);
-  }
-
-  function hideInstallBanner() {
-    clearTimeout(bannerAutoHide);
-    installBanner.classList.remove('show');
-  }
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    if (isRunningInstalled) return; // already installed and open as an app — never show this again
-    deferredPrompt = e;
-    if (!localStorage.getItem('emag-install-dismissed')) {
-      showInstallBanner();
-    }
-  });
-
-  installBtn.addEventListener('click', async () => {
-    hideInstallBanner();
-    if (!deferredPrompt) return;
-    deferredPrompt.prompt();
-    const choice = await deferredPrompt.userChoice;
-    deferredPrompt = null;
-    // Some browsers fire 'appinstalled' late or not at all after this flow —
-    // don't rely on it alone once the user has accepted the prompt.
-    if (choice && choice.outcome === 'accepted') {
-      localStorage.setItem('emag-install-dismissed', '1');
-    }
-  });
-
-  dismissBtn.addEventListener('click', () => {
-    hideInstallBanner();
-    localStorage.setItem('emag-install-dismissed', '1');
-  });
-
-  window.addEventListener('appinstalled', () => {
-    hideInstallBanner();
-    localStorage.setItem('emag-install-dismissed', '1');
-  });
-
-  // Belt-and-suspenders: if the app is (or becomes) standalone — installed via
-  // the browser's own UI, not our button — hide the banner and never show it again.
-  function hideIfInstalled() {
-    const nowInstalled = window.matchMedia('(display-mode: standalone)').matches
-      || window.navigator.standalone === true;
-    if (nowInstalled) {
-      hideInstallBanner();
-      localStorage.setItem('emag-install-dismissed', '1');
-    }
-    return nowInstalled;
-  }
-  hideIfInstalled();
-  window.matchMedia('(display-mode: standalone)').addEventListener?.('change', hideIfInstalled);
-  document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') hideIfInstalled();
-  });
 
   // ---------- Service worker ----------
   if ('serviceWorker' in navigator) {
