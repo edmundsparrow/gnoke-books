@@ -1,4 +1,4 @@
-const CACHE = 'gnoke-books-comfort-food-v27';
+const CACHE = 'gnoke-books-comfort-food-v28';
 
 const ASSETS = [
   './',
@@ -9,9 +9,11 @@ const ASSETS = [
   './icons/icon-192.svg',
   './icons/icon-512.svg',
   './icons/icon-maskable.svg',
+  './favicon.png',
   './assets/stamp.png',
   './assets/window.png',
-  './assets/dev-challenge-banner.webp'
+  './assets/dev-challenge-banner.webp',
+  './assets/og-cover.png'
 ];
 
 self.addEventListener('install', (event) => {
