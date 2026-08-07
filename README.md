@@ -6,7 +6,7 @@ add a page, it's part of the issue.
 ## What's engine vs. what's this issue
 
 - **Engine** (reusable): `js/app.js`, `sw.js`, `manifest.json`, the app-shell
-  CSS in `css/style.css` (navigation, page transitions, install banner,
+  CSS in `css/style.css` (navigation, page transitions,
   theming tokens).
 - **This issue** (bespoke): the `<section class="page">` blocks inside
   `index.html` — the actual Comfort Food content, recipe card, Bolle & Fish
