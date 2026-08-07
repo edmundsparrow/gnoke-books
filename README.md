@@ -53,8 +53,3 @@ an issue by changing those, not by hunting through component rules.
 Arrow keys, swipe, and prev/next buttons are wired generically off the
 `.page` collection — no per-page JS required.
 
-## PWA / install banner
-
-Offline shell via `sw.js` + `manifest.json`. The install-banner dismissal
-flag is stored under the generic key `emag-install-dismissed` in
-localStorage — safe to reuse across issues without key collisions.
